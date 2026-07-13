@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Battery ⚡ - Recharge Yourself</title>
+  <meta name="description" content="Estimates your human battery percentage based on sleep, water, mood, and exercise. A playful hand-drawn wellness tool.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Floating Doodles -->
+  <div class="doodle-bg" aria-hidden="true">
+    <div class="doodle float-1" style="top: 15%; left: 8%;">⚡</div>
+    <div class="doodle float-2" style="top: 25%; right: 10%;">☁️</div>
+    <div class="doodle float-3" style="top: 50%; left: 5%;">💧</div>
+    <div class="doodle float-1" style="top: 70%; right: 7%;">😊</div>
+    <div class="doodle float-2" style="top: 85%; left: 12%;">🌱</div>
+    <div class="doodle float-3" style="top: 40%; right: 20%;">⭐</div>
+    <div class="doodle float-1" style="top: 60%; left: 25%;">❤️</div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <span>⚡</span> Human Battery
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links-wrapper">
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html" id="nav-link-home">Home</a></li>
+          <li><a href="calculator.html" id="nav-link-calc">Calculator</a></li>
+          <li><a href="about.html" id="nav-link-about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Recharge Yourself.</h1>
+          <p>Discover how full your human battery feels today through our playful wellness estimator. Align your sleep, hydration, mood, and movement to unlock your optimal charge state.</p>
+          <a href="calculator.html" class="btn-doodle" id="hero-cta-btn">
+            Check My Battery ⚡
+          </a>
+        </div>
+        <div class="hero-img-container">
+          <!-- Premium Hand-Drawn Doodle SVG Illustration of Battery -->
+          <svg class="hero-illustration" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sketch of a smiling, floating battery with sparks around it">
+            <!-- Sparks / Doodle lines -->
+            <path d="M 30,50 Q 20,40 10,45" stroke="#2D3748" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 170,40 Q 185,30 190,45" stroke="#2D3748" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 25,240 Q 15,250 10,235" stroke="#2D3748" stroke-width="3" stroke-linecap="round" fill="none" />
+            
+            <!-- Battery Cap -->
+            <path d="M 85,35 C 85,25 115,25 115,35 Z" fill="#F6E05E" stroke="#2D3748" stroke-width="4" stroke-linejoin="round" />
+            
+            <!-- Battery Body with hand-drawn irregular curvature -->
+            <rect x="50" y="35" width="100" height="200" rx="20" ry="20" fill="#FFFFFF" stroke="#2D3748" stroke-width="4" />
+            
+            <!-- Inside liquid fill doodles -->
+            <rect x="58" y="115" width="84" height="110" rx="10" ry="10" fill="#63B3ED" />
+            
+            <!-- Smiling Eyes -->
+            <circle cx="85" cy="80" r="5" fill="#2D3748" />
+            <circle cx="115" cy="80" r="5" fill="#2D3748" />
+            
+            <!-- Cheeks -->
+            <circle cx="75" cy="88" r="4" fill="#FC8181" opacity="0.6" />
+            <circle cx="125" cy="88" r="4" fill="#FC8181" opacity="0.6" />
+            
+            <!-- Smile (curved arc) -->
+            <path d="M 92,90 Q 100,102 108,90" stroke="#2D3748" stroke-width="3.5" stroke-linecap="round" fill="none" />
+            
+            <!-- Sparkles/Energy Indicator -->
+            <path d="M 100,140 L 90,165 L 105,165 L 95,195" stroke="#2D3748" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- Features Cards Grid -->
+      <section class="features">
+        <h2 class="features-title">The Four Charge Factors</h2>
+        <div class="features-grid">
+          
+          <div class="card-doodle feature-card" id="card-sleep">
+            <span class="feature-icon" aria-hidden="true">😴</span>
+            <h3>Sleep Hours</h3>
+            <p>Your ultimate system reboot. Optimal sleep rejuvenates cellular health and restores peak battery performance.</p>
+          </div>
+
+          <div class="card-doodle feature-card" id="card-water">
+            <span class="feature-icon" aria-hidden="true">💧</span>
+            <h3>Water Intake</h3>
+            <p>Keep your internal turbines lubricated. Proper hydration drives mental clarity and active metabolic flow.</p>
+          </div>
+
+          <div class="card-doodle feature-card" id="card-exercise">
+            <span class="feature-icon" aria-hidden="true">🏃</span>
+            <h3>Exercise Minutes</h3>
+            <p>Generate kinetic battery charge. Moving your body regularly releases natural endorphins and builds energy stamina.</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">⚡ Human Battery</div>
+        <p class="footer-credits">Made with HTML, CSS & JavaScript</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Visit GitHub repository">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Scroll back to top">
+          ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

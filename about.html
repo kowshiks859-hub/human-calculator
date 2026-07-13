@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Human Battery ⚡</title>
+  <meta name="description" content="Learn how the Human Battery wellness estimator measures your daily energy levels based on key physical and mental inputs.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Floating Doodles -->
+  <div class="doodle-bg" aria-hidden="true">
+    <div class="doodle float-2" style="top: 15%; left: 6%;">⚡</div>
+    <div class="doodle float-3" style="top: 35%; right: 12%;">☁️</div>
+    <div class="doodle float-1" style="top: 55%; left: 9%;">💧</div>
+    <div class="doodle float-2" style="top: 75%; right: 5%;">😊</div>
+    <div class="doodle float-3" style="top: 85%; left: 15%;">🌱</div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <span>⚡</span> Human Battery
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links-wrapper">
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html" id="nav-link-home">Home</a></li>
+          <li><a href="calculator.html" id="nav-link-calc">Calculator</a></li>
+          <li><a href="about.html" id="nav-link-about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- About Context Content -->
+        <div class="about-content">
+          <h1>About Human Battery</h1>
+          <p class="about-intro">Human Battery is a playful wellness tracker designed for fun, mindfulness, and healthy self-reflection. It offers a quick, interactive way to check in with your daily habits and see how they impact your overall mood and energy projection.</p>
+          
+          <div class="card-doodle about-card" id="disclaimer-card">
+            <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>⚠️</span> Friendly Disclaimer
+            </h2>
+            <p style="font-size: 0.95rem; color: #4A5568;">This estimator is intended solely for recreational visualization and is <strong>not a medical diagnostic tool</strong>. Percentages are estimated based on simple input math, and are not substitute for professional medical care, diagnosis, or health advisory.</p>
+          </div>
+
+          <h2 style="margin-bottom: 1.5rem;">How Your Battery Works</h2>
+          <p>We combine your metrics into a single score using a weighted wellness model:</p>
+          
+          <div class="about-factors">
+            <!-- Sleep -->
+            <div class="factor-item" id="factor-sleep">
+              <div class="factor-icon" aria-hidden="true">😴</div>
+              <div class="factor-info">
+                <h4>Sleep (40% Weight)</h4>
+                <p>Calculated against an optimal 8-hour target. Quality sleep acts as the primary recovery stage for your battery.</p>
+              </div>
+            </div>
+
+            <!-- Water -->
+            <div class="factor-item" id="factor-water">
+              <div class="factor-icon" aria-hidden="true">💧</div>
+              <div class="factor-info">
+                <h4>Water Intake (20% Weight)</h4>
+                <p>Targets a baseline of 3 Liters daily. Hydration keeps cognitive pathways and metabolic functions clear.</p>
+              </div>
+            </div>
+
+            <!-- Mood -->
+            <div class="factor-item" id="factor-mood">
+              <div class="factor-icon" aria-hidden="true">😊</div>
+              <div class="factor-info">
+                <h4>Current Mood (20% Weight)</h4>
+                <p>Measures mental energy. Your emotional outlook directly regulates the rate of energy expenditure.</p>
+              </div>
+            </div>
+
+            <!-- Exercise -->
+            <div class="factor-item" id="factor-exercise">
+              <div class="factor-icon" aria-hidden="true">🏃</div>
+              <div class="factor-info">
+                <h4>Exercise (20% Weight)</h4>
+                <p>Targets a baseline of 45 minutes of movement. Cardio and strength training boost cardiovascular performance and build energy stamina.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illustration Column -->
+        <div class="about-illustration-container">
+          <!-- Floating Doodle illustration for About page -->
+          <svg class="about-illustration" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cute floating cloud dreaming of a battery icon">
+            <!-- Cloud Outline -->
+            <path d="M 50,130 C 30,130 20,110 30,90 C 20,70 40,50 60,60 C 70,40 100,40 110,60 C 130,50 150,70 140,90 C 150,110 140,130 120,130 Z" fill="#FFFFFF" stroke="#2D3748" stroke-width="4" stroke-linejoin="round" />
+            
+            <!-- Eyes on Cloud -->
+            <path d="M 65,95 Q 70,90 75,95" stroke="#2D3748" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 95,95 Q 100,90 105,95" stroke="#2D3748" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M 80,105 Q 85,110 90,105" stroke="#2D3748" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+            <!-- Bubble thoughts -->
+            <circle cx="130" cy="155" r="8" fill="#FFFFFF" stroke="#2D3748" stroke-width="3" />
+            <circle cx="115" cy="180" r="5" fill="#FFFFFF" stroke="#2D3748" stroke-width="2" />
+            <circle cx="102" cy="198" r="3" fill="#FFFFFF" stroke="#2D3748" stroke-width="2" />
+
+            <!-- Sparkling Light/Idea -->
+            <path d="M 125,230 L 115,250 L 130,250 L 120,275" stroke="#2D3748" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            
+            <!-- Little Heart floating below -->
+            <path d="M 60,170 C 50,155 35,160 35,175 C 35,190 60,205 60,205 C 60,205 85,190 85,175 C 85,160 70,155 60,170 Z" fill="#FC8181" stroke="#2D3748" stroke-width="3" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">⚡ Human Battery</div>
+        <p class="footer-credits">Made with HTML, CSS & JavaScript</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Visit GitHub repository">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Scroll back to top">
+          ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

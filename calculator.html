@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery Estimator - Human Battery ⚡</title>
+  <meta name="description" content="Calculate your daily wellness state. Enter your sleep, hydration, mood, and movement to test your human battery.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Floating Doodles -->
+  <div class="doodle-bg" aria-hidden="true">
+    <div class="doodle float-3" style="top: 10%; left: 5%;">⚡</div>
+    <div class="doodle float-1" style="top: 30%; right: 8%;">☁️</div>
+    <div class="doodle float-2" style="top: 60%; left: 8%;">💧</div>
+    <div class="doodle float-3" style="top: 80%; right: 12%;">🌱</div>
+    <div class="doodle float-1" style="top: 45%; right: 25%;">⭐</div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <span>⚡</span> Human Battery
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links-wrapper">
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html" id="nav-link-home">Home</a></li>
+          <li><a href="calculator.html" id="nav-link-calc">Calculator</a></li>
+          <li><a href="about.html" id="nav-link-about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="calc-container">
+        
+        <!-- Inputs Form Card -->
+        <div class="card-doodle calc-form-card" id="form-card">
+          <h2 style="font-size: 1.8rem; margin-bottom: -0.5rem;">Estimate Your Charge</h2>
+          
+          <!-- Sleep Slider -->
+          <div class="input-group">
+            <div class="input-label-row">
+              <label for="sleep-slider">😴 Sleep Hours</label>
+              <span class="label-val" id="sleep-val">8h</span>
+            </div>
+            <div class="slider-container">
+              <input type="range" id="sleep-slider" min="0" max="12" step="0.5" value="8" class="range-slider" aria-valuemin="0" aria-valuemax="12" aria-valuenow="8">
+            </div>
+          </div>
+
+          <!-- Water Slider -->
+          <div class="input-group">
+            <div class="input-label-row">
+              <label for="water-slider">💧 Water Intake</label>
+              <span class="label-val" id="water-val">2L</span>
+            </div>
+            <div class="slider-container">
+              <input type="range" id="water-slider" min="0" max="5" step="0.25" value="2" class="range-slider" aria-valuemin="0" aria-valuemax="5" aria-valuenow="2">
+            </div>
+          </div>
+
+          <!-- Mood Selector -->
+          <div class="input-group">
+            <div class="input-label-row">
+              <label>😊 Current Mood</label>
+            </div>
+            <div class="emoji-selector" role="radiogroup" aria-label="Current Mood selector">
+              <button type="button" class="emoji-btn" data-value="20" aria-label="Very Bad" role="radio" aria-checked="false">😞</button>
+              <button type="button" class="emoji-btn" data-value="50" aria-label="Neutral" role="radio" aria-checked="false">😐</button>
+              <button type="button" class="emoji-btn active" data-value="75" aria-label="Happy" role="radio" aria-checked="true">🙂</button>
+              <button type="button" class="emoji-btn" data-value="90" aria-label="Very Happy" role="radio" aria-checked="false">😄</button>
+              <button type="button" class="emoji-btn" data-value="100" aria-label="Excited" role="radio" aria-checked="false">😁</button>
+            </div>
+          </div>
+
+          <!-- Exercise Slider -->
+          <div class="input-group">
+            <div class="input-label-row">
+              <label for="exercise-slider">🏃 Exercise Minutes</label>
+              <span class="label-val" id="exercise-val">30m</span>
+            </div>
+            <div class="slider-container">
+              <input type="range" id="exercise-slider" min="0" max="120" step="5" value="30" class="range-slider" aria-valuemin="0" aria-valuemax="120" aria-valuenow="30">
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="button" class="btn-doodle" id="calc-btn" style="margin-top: 1rem; width: 100%;">
+            Estimate Battery ⚡
+          </button>
+        </div>
+
+        <!-- Output Visualizer Card -->
+        <div class="card-doodle calc-result-card" id="result-card">
+          <h2 class="result-percentage-header">Your Status</h2>
+          
+          <!-- Battery Visualizer Component -->
+          <div class="battery-graphic-wrapper" aria-label="Visual battery representation">
+            <div class="battery-cap"></div>
+            <div class="battery-body">
+              <div class="battery-fill" id="battery-fill-bar"></div>
+              <div class="battery-percentage-text" id="pct-display">0%</div>
+            </div>
+          </div>
+
+          <!-- Fun wellness description -->
+          <div class="result-message" id="advice-msg">Click estimate to check your power levels.</div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">⚡ Human Battery</div>
+        <p class="footer-credits">Made with HTML, CSS & JavaScript</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Visit GitHub repository">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" aria-label="Scroll back to top">
+          ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
